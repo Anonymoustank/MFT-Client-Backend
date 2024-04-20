@@ -1,5 +1,4 @@
 import express from "express";
-import grpc from "grpc"
 const protoLoader = require('@grpc/proto-loader');
 // const loadPackageDefinition = require('@grpc/grpc-js/loadPackageDefinition');
 // const ChannelCredentials = require('@grpc/grpc-js/ChannelCredentials');
