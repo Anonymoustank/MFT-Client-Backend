@@ -1,6 +1,6 @@
 ## About
 
-The frontend can be found [here](https://github.com/Anonymoustank/MFT-Client-Backend).
+The frontend can be found [here](https://github.com/Anonymoustank/mft-client).
 
 
 ## Available Scripts
