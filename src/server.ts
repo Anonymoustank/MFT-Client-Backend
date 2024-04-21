@@ -5,11 +5,11 @@ const protoLoader = require('@grpc/proto-loader');
 import {loadPackageDefinition, ChannelCredentials, GrpcObject} from "@grpc/grpc-js";
 const lodash = require('lodash');
 const {get} = lodash;
-var cors = require('cors');
+const cors = require('cors');
 
 const app = express();
 const port = 5500;
-const allowedOrigins = ["http://localhost:3000"];
+const allowedOrigins = ["http://localhost:3000, http://localhost:80, http://localhost:8080"];
 
 var PROTO_PATH = 'src/proto/StorageCommon.proto';
 var TRANSFER_API_PROTO_PATH = 'src/proto/api/stub/src/main/proto/MFTTransferApi.proto';
@@ -48,10 +48,14 @@ app.use(cors({
         // allow requests with no origin 
         // (like mobile apps or curl requests)
         if (!origin) return callback(null, true);
-        if (allowedOrigins.indexOf(origin) === -1) {
-            var msg = 'The CORS policy for this site does not allow access from the specified Origin.';
-            return callback(new Error(msg), false);
-        }
+
+        //RE ENABLE THE LINES BELOW FOR INCREASED SAFETY
+        //if you renable the lines below, you can't access the website from a local webpage
+
+        // if (allowedOrigins.indexOf(origin) === -1) {
+        //     var msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+        //     return callback(new Error(msg), false);
+        // }
         return callback(null, true);
     }
 }));
