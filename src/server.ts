@@ -6,6 +6,18 @@ import {loadPackageDefinition, ChannelCredentials, GrpcObject} from "@grpc/grpc-
 const lodash = require('lodash');
 const {get} = lodash;
 const cors = require('cors');
+const { spawn } = require('child_process');
+
+const child = spawn('mft', ['init']);
+child.stdout.setEncoding('utf8');
+
+child.stdout.on('data', (data: any) => {
+    console.log(`stdout: ${data}`);
+  });
+  
+child.stderr.on('data', (data: any) => {
+    console.error(`stderr: ${data}`);
+});
 
 const app = express();
 const port = 5500;
