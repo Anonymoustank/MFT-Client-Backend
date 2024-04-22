@@ -6,7 +6,7 @@ import {loadPackageDefinition, ChannelCredentials, GrpcObject} from "@grpc/grpc-
 const lodash = require('lodash');
 const {get} = lodash;
 const cors = require('cors');
-const { spawn } = require('child_process');
+const { spawn } = require('child_process'); //code below adapted from Ganning Xu's code at https://github.com/ganning127/mft-ui-backend/blob/main/main.ts
 
 const child = spawn('mft', ['init']);
 console.log("Running mft init")
@@ -99,7 +99,7 @@ app.get('/list-storages/:storageId', (req, res) => {
     if (storageType === "LOCAL") {
         // the secretID is just a blank string for local storage
         TransferServiceClient.resourceMetadata({"idRequest" :{
-            "resourcePath": path,
+            "resourcePath": path, //will just be / for the root directory
             "storageId": storageId,
             "secretId": "",
             "recursiveSearch": true,
