@@ -1,7 +1,14 @@
-## About
+# MFT-Client-Backend
+This is just one-half of the total project! The frontend can be found [here](https://github.com/Anonymoustank/mft-client).\
 
-The frontend can be found [here](https://github.com/Anonymoustank/mft-client).
+## Install instructions:
+- Clone this repository (or a fork of it)
+- From the terminal, run "npm install" in the MFT-Client folder
+- Run "npm run dev" in the MFT-Client folder
+- Install the frontend and run it (instructions found in the link above)
 
+## Contact:
+Contact Pranav Kadekodi at pkadekodi3@gatech.edu if you have any questions.
 
 ## Available Scripts
 
