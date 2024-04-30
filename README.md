@@ -1,5 +1,5 @@
 # MFT-Client-Backend
-This is just one-half of the total project! The frontend can be found [here](https://github.com/Anonymoustank/mft-client).\
+This is just one-half of the total project! The frontend can be found [here](https://github.com/Anonymoustank/mft-client).
 
 ## Install instructions:
 - Clone this repository (or a fork of it)
