@@ -74,10 +74,7 @@ app.use(cors({
 }));
 
 app.get('/', (req, res) => {
-    // res.json({
-    //     message: "You've reached the MFT API!"
-    // });
-    res.send("<h2>You've reached the MFT API!</h2>")
+    res.sendFile(__dirname + '/views/landingPage.html')
 });
 
 app.get('/list-storages', (req: express.Request, res: express.Response) => {
